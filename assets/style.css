@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Mooli&family=Poppins:wght@100;300;400;500;600;700&family=REM:wght@100;200;300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,900&family=Ubuntu:wght@300;400;500;700&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Mooli;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background: linear-gradient(rgba(191, 123, 255, 0.781), black);
+	--glow-color: rgb(217, 176, 255);
+	--glow-spread-color: rgba(191, 123, 255, 0.781);
+	--btn-color: rgb(100, 61, 136);
+}
+
+.title {
+	top: 10%;
+	position: fixed;
+	text-shadow: 0 0 2.5em var(--glow-color);
+	;
+}
+
+h1 {
+	font-weight: 900;
+	font-size: 3rem;
+	color: rgb(255, 255, 255);
+	text-shadow: 0 0 0.5em rgb(255 255 255),
+		0 0 0.5em rgb(255 255 255),
+		0 0 0.5em rgb(255 255 255);
+}
+
+.container {
+	width: 800px;
+	height: 500px;
+	border-radius: 15px;
+	position: absolute;
+	display: flex;
+	padding: 70px 40px;
+	text-align: center;
+	justify-content: space-between;
+	background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1));
+	backdrop-filter: blur(1rem);
+	z-index: 1;
+	box-shadow: 0 0 2.5em var(--glow-color),
+		0 0 2.5em var(--glow-color);
+	flex-direction: column;
+	flex-wrap: nowrap;
+	align-items: center;
+}
+
+button {
+	border: .25em solid var(--glow-color);
+	padding: 1em 3em;
+	color: rgb(255, 255, 255);
+	font-size: 15px;
+	font-weight: bold;
+	background-color: var(--btn-color);
+	border-radius: 1em;
+	outline: none;
+	box-shadow: 0 0 1em .25em var(--glow-color),
+		0 0 4em 1em var(--glow-spread-color),
+		inset 0 0 .75em .25em var(--glow-color);
+	text-shadow: 0 0 .5em var(--glow-color);
+	position: relative;
+	transition: all 0.3s;
+}
+
+button::after {
+	pointer-events: none;
+	content: "";
+	position: absolute;
+	top: 120%;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-color: var(--glow-spread-color);
+	filter: blur(2em);
+	opacity: .7;
+	transform: perspective(1.5em) rotateX(35deg) scale(1, .6);
+}
+
+button:hover {
+	color: black;
+	background-color: var(--glow-color);
+	box-shadow: 0 0 1em .25em var(--glow-color),
+		0 0 4em 2em var(--glow-spread-color),
+		inset 0 0 .75em .25em var(--glow-color);
+}
+
+button:active {
+	box-shadow: 0 0 0.6em .25em var(--glow-color),
+		0 0 2.5em 2em var(--glow-spread-color),
+		inset 0 0 .5em .25em var(--glow-color);
+}
+
+input {
+	color: rgb(255, 255, 255);
+	border: 3px solid #8707ff;
+	border-radius: 10px;
+	padding: 10px 25px;
+	background: transparent;
+	max-width: 190px;
+	outline: none;
+}
+
+input:active {
+	box-shadow: 2px 2px 15px #8707ff inset;
+}
+
+input::placeholder {
+	color: white;
+}
+
+
+label {
+	display: flex;
+	margin-bottom: 5px;
+	font-size: 1.5rem;
+	font-weight: 800;
+	color: white;
+	text-shadow: 0 0 0.5em rgb(255 255 255);
+}
