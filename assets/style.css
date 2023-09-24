@@ -9,9 +9,9 @@
 
 body {
 	display: flex;
+	height: 100vh;
 	justify-content: center;
 	align-items: center;
-	min-height: 100vh;
 	background: linear-gradient(rgba(191, 123, 255, 0.781), black);
 	--glow-color: rgb(217, 176, 255);
 	--glow-spread-color: rgba(191, 123, 255, 0.781);
@@ -20,23 +20,25 @@ body {
 
 .title {
 	top: 10%;
-	position: fixed;
+	position: absolute;
 	text-shadow: 0 0 2.5em var(--glow-color);
-	;
 }
 
 h1 {
-	font-weight: 900;
-	font-size: 3rem;
-	color: rgb(255, 255, 255);
+	justify-content: center;
+    font-weight: 900;
+    font-size: 3rem;
+    display: flex;
+    text-align: center;
+    color: rgb(255, 255, 255);
 	text-shadow: 0 0 0.5em rgb(255 255 255),
 		0 0 0.5em rgb(255 255 255),
 		0 0 0.5em rgb(255 255 255);
 }
 
 .container {
-	width: 800px;
-	height: 500px;
+	min-width: 50%;
+	height: 50%;
 	border-radius: 15px;
 	position: absolute;
 	display: flex;
