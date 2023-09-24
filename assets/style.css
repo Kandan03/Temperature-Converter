@@ -9,13 +9,13 @@
 
 body {
 	display: flex;
-	height: 100vh;
-	justify-content: center;
-	align-items: center;
-	background: linear-gradient(rgba(191, 123, 255, 0.781), black);
-	--glow-color: rgb(217, 176, 255);
-	--glow-spread-color: rgba(191, 123, 255, 0.781);
-	--btn-color: rgb(100, 61, 136);
+    	height: 100vh;
+    	justify-content: center;
+    	align-items: center;
+    	background: linear-gradient(rgb(22 22 22 / 78%), black);
+	--glow-color: rgb(255, 255, 255);
+	--glow-spread-color: rgba(255, 255, 255, 0.781);
+	--btn-color: rgb(255, 255, 255);
 }
 
 .title {
@@ -48,28 +48,25 @@ h1 {
 	background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1));
 	backdrop-filter: blur(1rem);
 	z-index: 1;
-	box-shadow: 0 0 2.5em var(--glow-color),
-		0 0 2.5em var(--glow-color);
+	box-shadow: 0 0 2.5em rgb(255 255 255), 0 0 2.5em rgb(255 255 255);
 	flex-direction: column;
 	flex-wrap: nowrap;
 	align-items: center;
 }
 
 button {
-	border: .25em solid var(--glow-color);
-	padding: 1em 3em;
-	color: rgb(255, 255, 255);
-	font-size: 15px;
-	font-weight: bold;
-	background-color: var(--btn-color);
-	border-radius: 1em;
-	outline: none;
-	box-shadow: 0 0 1em .25em var(--glow-color),
-		0 0 4em 1em var(--glow-spread-color),
-		inset 0 0 .75em .25em var(--glow-color);
-	text-shadow: 0 0 .5em var(--glow-color);
-	position: relative;
-	transition: all 0.3s;
+	border: 0.25em solid rgb(254 253 255);
+      	padding: 1em 3em;
+    	color: rgb(255, 255, 255);
+    	font-size: 15px;
+    	font-weight: bold;
+    	background-color: rgb(50 50 50 / 0%);
+    	border-radius: 1em;
+    	outline: none;
+    	box-shadow: 0 0 1em 0.25em rgb(0 0 0), 0 0 4em 1em rgb(255 255 255 / 78%), inset 0 0 0.75em 0.25em rgb(255 255 255);
+    	text-shadow: 0 0 0.5em rgb(255 255 255);
+    	position: relative;
+    	transition: all 0.3s;
 }
 
 button::after {
@@ -102,7 +99,7 @@ button:active {
 
 input {
 	color: rgb(255, 255, 255);
-	border: 3px solid #8707ff;
+	border: 3px solid #ffffff;
 	border-radius: 10px;
 	padding: 10px 25px;
 	background: transparent;
@@ -111,7 +108,7 @@ input {
 }
 
 input:active {
-	box-shadow: 2px 2px 15px #8707ff inset;
+	box-shadow: 2px 2px 15px #ffffff inset;
 }
 
 input::placeholder {
